@@ -1,7 +1,7 @@
-import React from 'react';
-import { Board } from '../Board';
+import React, { Component } from 'react'
+import { Board } from '../Board'
 
-class Game extends React.Component {
+class Game extends Component {
   render() {
     return (
       <div className="game">
@@ -13,8 +13,8 @@ class Game extends React.Component {
           <ol>{/* TODO */}</ol>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Game;
+export default Game

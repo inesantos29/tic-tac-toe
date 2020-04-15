@@ -1,14 +1,13 @@
-import React from 'react';
-import './App.css';
-import { Game } from './components/Game';
+import React from 'react'
+import { Game } from './components/Game'
 
-function App(){
+function App() {
   return (
     <>
       <h1>Tic-tac-toe Game</h1>
-      <Game/>
+      <Game />
     </>
-  );
+  )
 }
 
-export default App;
+export default App
