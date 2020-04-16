@@ -24,4 +24,6 @@ yarn-error.log*
 
 # webstorm
 .idea/
-src/**/*.css
+
+# vscode
+.vscode/
