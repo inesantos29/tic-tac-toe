@@ -1,24 +1,29 @@
 import React, { Component } from 'react'
 import { Square } from '../Square'
+import { calculateWinner } from '../../utils/helpers'
 
 class Board extends Component {
   state = {
     squares: Array(9).fill(null),
+    xIsNext: true,
   }
 
   handleClick = (i) => {
     const squares = this.state.squares.slice()
-    squares[i] = 'X'
-    this.setState({ squares })
+    squares[i] = this.state.xIsNext ? 'X' : 'O'
+    this.setState({
+      squares,
+      xIsNext: !this.state.xIsNext,
+    })
   }
 
   renderSquare = (i) => {
-    const { squares } = this.state.squares[i]
+    const squares = this.state.squares[i]
     return <Square value={squares} onClick={() => this.handleClick(i)} />
   }
 
   render() {
-    const status = 'Next player: X'
+    const status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O')
 
     return (
       <div>
